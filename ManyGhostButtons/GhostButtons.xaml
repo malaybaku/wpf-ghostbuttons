@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="./ButtonStyles/ShadowButton.xaml"/>
+        <ResourceDictionary Source="./ButtonStyles/GhostButton1.xaml"/>
+        <ResourceDictionary Source="./ButtonStyles/RoundCornerButton.xaml"/>
+        <ResourceDictionary Source="./ButtonStyles/ThicknessChangeButton.xaml"/>
+        <ResourceDictionary Source="./ButtonStyles/RectFromCenterButton.xaml"/>
+        <ResourceDictionary Source="./ButtonStyles/RectFromLeftButton.xaml"/>
+        <ResourceDictionary Source="./ButtonStyles/RadialBlurButton.xaml"/>
+        <ResourceDictionary Source="./ButtonStyles/ColorChangeButton.xaml"/>
+        <ResourceDictionary Source="./ButtonStyles/ColorChangeButton2.xaml"/>
+        <ResourceDictionary Source="./ButtonStyles/ColorChangeButton3.xaml"/>
+        <ResourceDictionary Source="./ButtonStyles/CircleFromCenterButton.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

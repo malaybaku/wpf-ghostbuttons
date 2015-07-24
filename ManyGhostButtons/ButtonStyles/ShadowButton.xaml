@@ -1,0 +1,94 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="ShadowButton" TargetType="{x:Type Button}">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Background" Value="{x:Static SystemColors.ControlLightBrush}"/>        
+        <Setter Property="Foreground" Value="{x:Static SystemColors.ControlTextBrush}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="MinWidth" Value="10"/>
+        <Setter Property="MinHeight" Value="10"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="MainBorder"
+                            Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                            BorderBrush="{TemplateBinding Foreground}"
+                            BorderThickness="1">
+                        <Border.RenderTransform>
+                            <TranslateTransform Y="{Binding Path=X, RelativeSource={RelativeSource Self}}"/>
+                        </Border.RenderTransform>
+                        <Border.Effect>
+                            <DropShadowEffect ShadowDepth="0" BlurRadius="0" Direction="315"/>
+                        </Border.Effect>
+                        <Grid>
+                            <Rectangle x:Name="RectBackground" Fill="{TemplateBinding Background}"
+                                       Opacity="0"
+                                       />
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              Margin="4"/>
+                        </Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="MainBorder" 
+                                                         Storyboard.TargetProperty="Effect.ShadowDepth"
+                                                         Duration="0:0:0.2" To="0"/>
+                                        <DoubleAnimation Storyboard.TargetName="MainBorder" 
+                                                         Storyboard.TargetProperty="Effect.BlurRadius"
+                                                         Duration="0:0:0.2" To="0"/>
+                                        <DoubleAnimation Storyboard.TargetName="MainBorder"
+                                                         Storyboard.TargetProperty="RenderTransform.X"
+                                                         To="0" Duration="0:0:0.1"/>
+                                        <DoubleAnimation Storyboard.TargetName="RectBackground"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.1" To="0"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="MainBorder" 
+                                                         Storyboard.TargetProperty="Effect.ShadowDepth"
+                                                         Duration="0:0:0.1" To="4"/>
+                                        <DoubleAnimation Storyboard.TargetName="MainBorder" 
+                                                         Storyboard.TargetProperty="Effect.BlurRadius"
+                                                         Duration="0:0:0.1" To="4"/>
+                                        <DoubleAnimation Storyboard.TargetName="MainBorder"
+                                                         Storyboard.TargetProperty="RenderTransform.X"
+                                                         Duration="0:0:0.1" To="-2"/>
+                                        <DoubleAnimation Storyboard.TargetName="RectBackground"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0:0:0.1" To="0.5"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="MainBorder" 
+                                                         Storyboard.TargetProperty="Effect.ShadowDepth"
+                                                         Duration="0" To="1"/>
+                                        <DoubleAnimation Storyboard.TargetName="MainBorder" 
+                                                         Storyboard.TargetProperty="Effect.BlurRadius"
+                                                         Duration="0" To="0"/>
+                                        <DoubleAnimation Storyboard.TargetName="MainBorder"
+                                                         Storyboard.TargetProperty="Effect.Direction"
+                                                         Duration="0" To="135"/>
+                                        <DoubleAnimation Storyboard.TargetName="MainBorder"
+                                                         Storyboard.TargetProperty="RenderTransform.X"
+                                                         Duration="0" To="1"/>
+                                        <DoubleAnimation Storyboard.TargetName="RectBackground"
+                                                         Storyboard.TargetProperty="Opacity"
+                                                         Duration="0" To="1"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Disabled"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
