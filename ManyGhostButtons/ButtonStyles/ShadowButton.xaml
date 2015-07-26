@@ -61,7 +61,7 @@
                                                          Duration="0:0:0.1" To="-2"/>
                                         <DoubleAnimation Storyboard.TargetName="RectBackground"
                                                          Storyboard.TargetProperty="Opacity"
-                                                         Duration="0:0:0.1" To="0.5"/>
+                                                         Duration="0:0:0.1" To="1"/>
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="Pressed">
