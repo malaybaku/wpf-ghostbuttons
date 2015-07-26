@@ -16,7 +16,7 @@ MainWindow.xaml自体が利用方法のサンプルになっているのでご�
 <Button Style="{StaticResource ShadowButton}" ... />
 ```
 
-というスタイル指定で設定されており、スタイルのロードは`GhostButtons.xaml'で、各スタイルの定義は`ButtonStyles`フォルダ以下の各ファイルで行われています。
+というスタイル指定で設定されており、スタイルのロードは`GhostButtons.xaml`で、各スタイルの定義は`ButtonStyles`フォルダ以下の各ファイルで行われています。
 
 ### 注意
 [MSDN](https://msdn.microsoft.com/ja-jp/library/ms753328%28v=vs.110%29.aspx)ではボタンの`VisualState`について`FocusStates`グループや`ValidationStates`があることが触れられていますが、ココで作っているゴーストボタンではこれらのグループは実装されていません。本プロジェクトで作られたゴーストボタンは`CommonStates`グループの`Normal`,`MouseOver`,`Pressed`のみを実装しています。
