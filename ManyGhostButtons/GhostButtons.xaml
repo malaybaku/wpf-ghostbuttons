@@ -12,5 +12,6 @@
         <ResourceDictionary Source="./ButtonStyles/ColorChangeButton2.xaml"/>
         <ResourceDictionary Source="./ButtonStyles/ColorChangeButton3.xaml"/>
         <ResourceDictionary Source="./ButtonStyles/CircleFromCenterButton.xaml"/>
+        <ResourceDictionary Source="./ButtonStyles/EchoLikeCircleButton.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

@@ -23,10 +23,11 @@
             <Button Style="{StaticResource RectFromCenterButton}" Content="Rect Center" Margin="5"  Background="Red"/>
             <Button Style="{StaticResource RectFromLeftButton}" Content="Rect Left" Margin="5"  Background="Red"/>
             <Button Style="{StaticResource RadialBlurButton}" Content="Radial Blur" Margin="5"  Background="Red"/>
-            <Button Style="{StaticResource ColorChangeButton}" Content="Color 1" Margin="5"  Background="Red"/>
+            <Button Style="{StaticResource ColorChangeButton}" Content="Color 1" Margin="5"  Background="#800000FF"/>
             <Button Style="{StaticResource ColorChangeButton2}" Content="Color 2" Margin="5" Background="Red" />
-            <Button Style="{StaticResource ColorChangeButton3}" Content="Color 3" Margin="5" Background="Red" />
+            <Button Style="{StaticResource ColorChangeButton3}" Content="Color 3" Margin="5" Background="Black" />
             <Button Style="{StaticResource CircleFromCenterButton}" Content="Circle Center" Margin="5" Background="Red" />
+            <Button Style="{StaticResource EchoLikeCircleButton}" Content="Circle Echo" Margin="5" Background="Red" />
         </WrapPanel>
     </ScrollViewer>
 </Window>

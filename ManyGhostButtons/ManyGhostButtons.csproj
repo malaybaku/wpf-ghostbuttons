@@ -55,11 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ButtonStyles\ColorChangeButton3.xaml">
+    <Page Include="ButtonStyles\EchoLikeCircleButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ButtonStyles\GhostButton1.xaml">
+    <Page Include="ButtonStyles\ColorChangeButton3.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
